@@ -1,0 +1,233 @@
+$primary-color: #0077ff;
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9fbfd;
+}
+
+.sort-options {
+    padding: 20px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sort-options button {
+    cursor: pointer;
+    padding: 2px 15px 2px 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: $primary-color;
+    color: white;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.sort-options button:hover {
+    background-color: rgba($color: $primary-color, $alpha: 0.7);
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-list button {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    transition: all;
+    transition-duration: 300ms;
+    font-size: 14px;
+    background-color: transparent;
+    border-color: transparent;
+    color: #ff0077;
+}
+
+.news-list button:hover {
+    color: #a0074e;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px 20px 0px;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: $primary-color;
+    background-color: white;
+}
+
+.text-loading {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-story {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.text-story:hover {
+    color: #0037ff;
+}
+
+.news-item--title-author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0px 3px 0px;
+}
+
+.text-author {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 0px 0px 0px;
+    font-size: 16px;
+    color: #ff0077;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.text-score {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ff0077;
+    padding: 0px 0px 15px 0px;
+}
+
+.text-comments {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: #008cff;
+    transition: all;
+    transition-duration: 300ms;
+    padding: 0px 0px 10px 0px;
+}
+
+.text-comments:hover {
+    color: #0037ff;
+}
+
+.news-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-title {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.comments-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comment-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    max-width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .comment-author {
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .comment-text {
+        font-size: 14px;
+        margin-bottom: 10px;
+        text-align: justify;
+        word-break: break-all;
+    }
+
+    .comment-replies {
+        margin-left: 20px;
+        padding-left: 10px;
+        border-left: 2px solid #eee;
+    }
+}
+
+.comment-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #008cff;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.comment-item button:hover {
+    color: #0037ff;
+}
+
+@media (max-width: 767px) {
+    .news-item {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 15px 20px 15px;
+        padding: 10px 15px 10px 15px;
+        border: 2px solid;
+        border-radius: 10px;
+        border-color: $primary-color;
+        background-color: white;
+    }
+
+    .comment-title {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+        font-size: 16px;
+        font-weight: 600;
+        max-width: 250px;
+    }
+
+    .comment-item {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+        max-width: 300px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
